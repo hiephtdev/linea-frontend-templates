@@ -41,14 +41,11 @@ jobs:
       - name: Build
         run: |
             cd ${{ github.workspace }}/vue/nuxt3-wagmi-web3modal
-            npm run generate --preset=github_pages
+            npm run generate
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
           path: ${{ github.workspace }}/vue/nuxt3-wagmi-web3modal/.output/public
-
-  # Deployment job
-  
   # Deployment job
   deploy:
     # Add a dependency to the build job
@@ -57,10 +54,6 @@ jobs:
     permissions:
       pages: write      # to deploy to Pages
       id-token: write   # to verify the deployment originates from an appropriate source
-    # Deploy to the github_pages environment
-    environment:
-      name: github_pages
-      url: ${{ steps.deployment.outputs.page_url }}
     # Specify runner + deployment step
     runs-on: ubuntu-latest
     steps:
