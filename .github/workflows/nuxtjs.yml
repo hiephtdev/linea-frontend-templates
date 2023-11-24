@@ -41,7 +41,7 @@ jobs:
       - name: Build
         run: |
             cd ${{ github.workspace }}/vue/nuxt3-wagmi-web3modal
-            npm run build --preset=github_pages
+            npm run generate --preset=github_pages
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
