@@ -54,5 +54,7 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        run: npm run deploy
+        run: |
+            cd ${{ github.workspace }}/vue/nuxt3-wagmi-web3modal
+            npm run deploy
         
