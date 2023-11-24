@@ -1,0 +1,6 @@
+export declare const ConstantsUtil: {
+    FOUR_MINUTES_MS: number;
+    TEN_SEC_MS: number;
+    ONE_SEC_MS: number;
+    RESTRICTED_TIMEZONES: string[];
+};
