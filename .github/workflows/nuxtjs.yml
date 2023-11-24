@@ -42,7 +42,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: ${{ github.workspace }}/vue/nuxt3-wagmi-web3modal/.output
+          path: ${{ github.workspace }}/vue/nuxt3-wagmi-web3modal/.output/public
 
   # Deployment job
   
